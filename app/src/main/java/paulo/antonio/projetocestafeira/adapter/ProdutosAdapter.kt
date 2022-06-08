@@ -9,12 +9,13 @@ import paulo.antonio.projetocestafeira.model.Produtos
 
 class ProdutosAdapter : RecyclerView.Adapter<ProdutosAdapter.ProdutosViewHolder>() {
 
-    private var listProduto = emptyList<Produtos>()
+    var listProduto = emptyList<Produtos>()
 
     class ProdutosViewHolder (val binding: CardLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutosViewHolder {
-        return ProdutosViewHolder(CardLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false
+        return ProdutosViewHolder(CardLayoutBinding.inflate
+            (LayoutInflater.from(parent.context), parent, false
         ))
     }
 

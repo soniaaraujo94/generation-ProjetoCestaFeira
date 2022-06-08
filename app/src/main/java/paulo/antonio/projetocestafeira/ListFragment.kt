@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import paulo.antonio.projetocestafeira.adapter.ProdutosAdapter
 import paulo.antonio.projetocestafeira.databinding.FragmentListBinding
@@ -48,7 +49,7 @@ class ListFragment : Fragment() {
                 "O consumo regular contribui com o controle de açúcar no sangue, " +
                         "reduz inflamações, faz bem para o coração e aumenta a imunidade",
                 true)
-        )
+               )
 
         val adapter = ProdutosAdapter()
 
@@ -57,7 +58,11 @@ class ListFragment : Fragment() {
         binding.recycleProdutos.setHasFixedSize(true)
 
         adapter.setList(listProdutos)
-
+/*
+        binding.floatingButton.setOnClickListener{
+            findNavController().navigate(R.id.action_listFragment_to_descricaoFragment)
+        }
+*/
         return binding.root
     }
 }

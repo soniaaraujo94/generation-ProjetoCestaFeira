@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_listFragment_to_formFragment"
             app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_descricaoFragment"
+            app:destination="@id/descricaoFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_usuarioVendaFragment"
+            app:destination="@id/usuarioVendaFragment" />
     </fragment>
     <fragment
         android:id="@+id/formFragment"
@@ -21,6 +27,28 @@
         tools:layout="@layout/fragment_form" >
         <action
             android:id="@+id/action_formFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/descricaoFragment"
+        android:name="paulo.antonio.projetocestafeira.descricaoFragment"
+        android:label="fragment_descricao"
+        tools:layout="@layout/fragment_descricao" >
+        <action
+            android:id="@+id/action_descricaoFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuarioVendaFragment"
+        android:name="paulo.antonio.projetocestafeira.usuarioVendaFragment"
+        android:label="fragment_usuario_venda"
+        tools:layout="@layout/fragment_usuario_venda" >
+        <action
+            android:id="@+id/action_usuarioVendaFragment_to_listFragment"
             app:destination="@id/listFragment"
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true" />

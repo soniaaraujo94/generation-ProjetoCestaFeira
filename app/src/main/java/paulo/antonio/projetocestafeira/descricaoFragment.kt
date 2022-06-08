@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import paulo.antonio.projetocestafeira.databinding.FragmentDescricaoBinding
 import paulo.antonio.projetocestafeira.databinding.FragmentFormBinding
 
-class formFragment : Fragment() {
 
-    private lateinit var binding: FragmentFormBinding
+class descricaoFragment : Fragment() {
+
+    private lateinit var binding: FragmentDescricaoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,14 +20,13 @@ class formFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        binding = FragmentFormBinding.inflate(layoutInflater, container, false)
+        binding = FragmentDescricaoBinding.inflate(layoutInflater, container, false)
 
-        binding.btnAdicionarProduto.setOnClickListener{
+        binding.toolbar.setOnClickListener{
             findNavController().navigate(R.id.action_listFragment_to_formFragment)
-
         }
 
         return binding.root
-}
+    }
 
 }
