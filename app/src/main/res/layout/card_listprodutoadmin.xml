@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#FCFFE4"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="110dp"
+                android:layout_height="87dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="#FFF5A0"
+                app:cardElevation="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgProd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textId"
+                        android:layout_width="36dp"
+                        android:layout_height="30dp"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textCategoria"
+                        android:layout_width="111dp"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:hint="Pereira"
+                        android:text="Frutas"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textValoradmin" />
+
+                    <TextView
+                        android:id="@+id/textValoradmin"
+                        android:layout_width="77dp"
+                        android:layout_height="31dp"
+                        android:gravity="center_vertical"
+                        android:text="R$ 20,00"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        app:layout_constraintBottom_toTopOf="@+id/textCategoria"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/textId"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imgProd"
+                android:layout_width="154dp"
+                android:layout_height="124dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textValoradmin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/input_img" />
+
+            <ImageView
+                android:id="@+id/atuaPost"
+                android:layout_width="55dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/edit" />
+
+            <ImageView
+                android:id="@+id/deletPost"
+                android:layout_width="55dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/atuaPost"
+                app:layout_constraintStart_toStartOf="@+id/atuaPost"
+                app:layout_constraintTop_toBottomOf="@+id/atuaPost"
+                app:srcCompat="@drawable/delete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

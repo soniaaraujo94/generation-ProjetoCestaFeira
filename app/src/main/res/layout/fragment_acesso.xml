@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acesso.AcessoFragment">
+
+    <ImageView
+        android:id="@+id/loginscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loginscreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Já tem uma conta? "
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_BuscarCep"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/btn_BuscarCep"
+        app:layout_constraintTop_toBottomOf="@+id/btn_BuscarCep" />
+
+    <TextView
+        android:id="@+id/link_acessarConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Acessar conta"
+        android:textColor="@color/azul_medio"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textConta"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="@+id/textConta"
+        app:layout_constraintTop_toBottomOf="@+id/textConta" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="234dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:text="Entre com seu CEP para ver as feiras próximas á você"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <EditText
+        android:id="@+id/input_Cep"
+        android:layout_width="269dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="@string/Hinr_cep"
+        android:inputType="number|textPostalAddress"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#7F8A91"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/btn_BuscarCep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/azul_medio"
+        android:elevation="0dp"
+        android:padding="20dp"
+        android:text="Buscar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/input_Cep"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_Cep"
+        app:layout_constraintTop_toBottomOf="@+id/input_Cep" />
+
+    <TextView
+        android:id="@+id/cad_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Cadastre-se"
+        android:textColor="@color/azul_forte"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textAlternativoLogin"
+        tools:layout_editor_absoluteY="634dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="116dp"
+        android:layout_height="204dp"
+        android:src="@drawable/logoblack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/loginscreen"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/loginscreen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
+
+    <TextView
+        android:id="@+id/textAlternativoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ainda não tem uma conta?"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_BuscarCep"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="@+id/btn_BuscarCep"
+        app:layout_constraintTop_toBottomOf="@+id/link_acessarConta" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
